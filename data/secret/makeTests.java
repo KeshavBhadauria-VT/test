@@ -1,15 +1,15 @@
-//@author Keshav Bhadauria
+//author @Keshav Bhadauria
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashSet;
 
-public class makeTests {
+public class Main {
 
 
     public static void main(String[] args) throws IOException {
         for (int i = 0; i < 10; i++) {
-            File file = new File("Sample0" + i + ".in");
+            File file = new File("secret00" + (i + 1) + ".in");
             FileWriter writer = new FileWriter(file);
             HashSet<Pair> set = new HashSet<>();
             int length = (int)(Math.random() * 100) + 1;
@@ -24,7 +24,7 @@ public class makeTests {
                     z--;
                     continue;
                 }
-                writer.write(integerPair.toString());
+                writer.write(integerPair.toString() + "\n");
                 set.add(integerPair);
             }
             int endingX = (int)(Math.random() * length);
@@ -35,7 +35,6 @@ public class makeTests {
                 endingY = (int)(Math.random() * width);
                 ending = new Pair<>(endingX, endingY);
             }
-            writer.write("\n");
             writer.write(ending.toString());
             writer.close();
         }
@@ -71,7 +70,7 @@ public class makeTests {
 
 
         @Override public String toString() {
-            return "[" + left + "," + right + "] ";
+            return left + " " + right;
         }
     }
 
