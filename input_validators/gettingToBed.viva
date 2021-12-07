@@ -1,1 +1,5 @@
 n (1 < n < 100) k (1 < k < 100) s (s < n*k);
+{[*s]
+    a:string (a %% "[") b (0 <= b <= n) c:string (c %% ",") d (0 <= d <= k)  e:string (e %% "]"); 
+}
+a:string (a %% "[") b (0 <= b <= n) c:string (a %% ",") d (0 <= d <= k)  e:string (e %% "]"); 
