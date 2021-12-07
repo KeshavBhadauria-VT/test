@@ -1,0 +1,39 @@
+\problemname{Getting to bed}
+
+\illustration{.3}{bed.jpg}{Source: \href{https://images.unsplash.com/photo-1582582621959-48d27397dc69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80}{Photo by obtained on Unsplash}}
+
+
+Paul has just moved in, but there are boxes everywhere, however,
+it's midnight and he wants to get to bed. The moving company
+gives you the dimensions of the room. Some boxes are too heavy to
+move without help, and they fit perfectly in the room, so its impossible to move diagonal. Given this
+information, is it possible to get to your bed without having to
+move the ``heavy boxes?''
+
+The room is given via a coordinate system, as seen below:
+\illustration{.3}{FirstExample.jpg}{
+    Photo by Keshav Bhadauria
+}
+
+The red boxes, are the boxes that are too heavy to move, while the green represents where the bed is. The door will always be at the starting position (0,0).
+
+Here's an example where the moving company left a path to the bed:
+
+\illustration{.3}{SecondExample.jpg}{
+    Photo by Keshav Bhadauria
+}
+The green arrows represents one of the paths Paul can take.
+
+
+\section*{Input}
+
+The input begins with a single line containing there integers, $n$ ($1 < n < 100$) which tells the length, $m$ ($1 < m < 100$) that tell the width of the room, and $k$ which tells how many unmovable boxes there are. 
+After that, there is another line containing $k$ number of integers pairs representing the coordinate pairs containing where the unmovable boxes 
+boxes are located. Lastly, there is one last line containing another integer pair (%f% %g%) showing where the bed is located. 
+
+Paul will always start at the position (0,0), and there will be no heavy boxes located at that spot.
+
+\section*{Output}
+
+Output \texttt{SLEEPING} if Paul can reach his bed, otherwise output \texttt{IMPOSSIBLE}.
+
