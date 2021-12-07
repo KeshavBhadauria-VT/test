@@ -1,27 +1,24 @@
 //@author Keshav Bhadauria
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Scanner;
 
 public class Solver {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(System.in);
         int[][] board = new int[scanner.nextInt()][scanner.nextInt()];
         int numberOfHeavy = scanner.nextInt();
         for (int i = 0; i < numberOfHeavy; i++) {
-            String current = scanner.next().replace(",", " ").replace("[", "").replace("]", "");
-            String[] strs = current.trim().split("\\s+");
-
-            int y = (Integer.parseInt(strs[0]));
-            int x = (Integer.parseInt(strs[1]));
+            int y = (scanner.nextInt());
+            int x = (scanner.nextInt());
 
             board[y][x] = 1;
         }
-        String current = scanner.next().replace(",", " ").replace("[", "").replace("]", "");
-        String[] strs = current.trim().split("\\s+");
 
-        int y = (Integer.parseInt(strs[0]));
-        int x = (Integer.parseInt(strs[1]));
+        int y = (scanner.nextInt());
+        int x = (scanner.nextInt());
         board[y][x] = 2;
         //Now the board is set up
         if (bfs(board, 0, 0, board.length, board[0].length, new Pair(x, y))) {
